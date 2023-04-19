@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets\images\pokemon_7025.png">
+    <link rel="shortcut icon" href="assets\images\fav.png">
     <title>Pokedex</title>
 
     <!-- Normalize CSS -->
@@ -21,20 +21,18 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/details.css">
 </head>
 
 <body>
     <section class="content">
-        
-        <h1>Pokedex ( Generation I )</h1>
-        <img src="assets\images\com_69163.png">
-        <input type="text" id="searchInput" placeholder="Search Pokemon" />
-        <button onclick="search()">Search</button>
+        <a><img src="https://fontmeme.com/permalink/230419/6259554b1427fc32835d54edddf14a58.png" alt="fonte-de-pokemon" border="0"></a>       
+        <p><input type="text" id="searchInput" placeholder="Search Pokemon" />
+            <button onclick="search()">Search</button></p>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
-
     </section>
 
     <!-- Nosso JS -->
