@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets\images\pokemon_7025.png">
     <title>Pokedex</title>
 
     <!-- Normalize CSS -->
@@ -24,17 +25,16 @@
 
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
+        
+        <h1>Pokedex ( Generation I )</h1>
+        <img src="assets\images\com_69163.png">
+        <input type="text" id="searchInput" placeholder="Search Pokemon" />
+        <button onclick="search()">Search</button>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
     </section>
 
     <!-- Nosso JS -->

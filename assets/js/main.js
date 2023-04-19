@@ -1,8 +1,10 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const searchInput = document.getElementById("searchInput");
+
 
 const maxRecords = 151
-const limit = 10
+const limit = 151
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
@@ -32,7 +34,7 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit)
 
-loadMoreButton.addEventListener('click', () => {
+/*loadMoreButton.addEventListener('click', () => {
     offset += limit
     const qtdRecordsWithNexPage = offset + limit
 
@@ -44,4 +46,35 @@ loadMoreButton.addEventListener('click', () => {
     } else {
         loadPokemonItens(offset, limit)
     }
-})
+})*/
+
+// Detalhes
+
+async function search() {
+    const pokemonName = searchInput.value.toLowerCase();
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+    try {
+      const response = await fetch(url);
+      const pokemon = await response.json();
+      displayPokemon(pokemon);
+    } catch (error) {
+      console.log(error);
+      alert("Pokemon not found");
+    }
+  }
+
+  function displayPokemon(pokemon) {
+    const pokemonListHTML = `
+      <div>
+        <img src="${pokemon.sprites.front_default}" />
+        <h2>${pokemon.name}</h2>
+        <p>Height: ${pokemon.height}m</p>
+        <p>Weight: ${pokemon.weight}kg</p>
+        <p>Abilities: ${pokemon.abilities.map((a) => a.ability.name).join(", ")}</p>
+      </div>
+    `;
+    pokemonList.innerHTML = pokemonListHTML;
+  }
+
+  //click
+  
