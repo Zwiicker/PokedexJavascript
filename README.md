@@ -4,7 +4,7 @@
 
 <br /><br /><img align="left" width="25px" src="assets/images/fav.png">
   <img align="right" width="25px" src="assets/images/fav.png">
-Project developed during the  "Bootcamp Potência Tech Angular Developer - Powered by iFood" by [DIO](https://web.dio.me/) <br /><br />
+Application developed during the  "Bootcamp Potência Tech Angular Developer - Powered by iFood" by [DIO](https://web.dio.me/) <br /><br />
 
 </div> 
 
