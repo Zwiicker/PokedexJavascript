@@ -3,6 +3,7 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const searchInput = document.getElementById("searchInput");
 
 
+
 const maxRecords = 151
 const limit = 151
 let offset = 0;
@@ -13,7 +14,7 @@ function convertPokemonToLi(pokemon) {
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
-            <div class="detail">
+                <div class="detail">
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
@@ -85,16 +86,22 @@ async function search() {
               </ul>
             `;
             const pokemonListHTML = `
-              <div>
-                <img src="${pokemon.sprites.front_default}" />
-                <p>Height: ${pokemon.height}m</p>
-                <p>Weight: ${pokemon.weight}kg</p>
-                <p>Type(s): ${typeList}</p>
-                <p>Abilities: ${pokemon.abilities.map((a) => a.ability.name).join(", ")}</p>
-                <p>Base Stats:</p>
+                <div class="details">
+                <div class="stats">
+                  <p>Height: ${pokemon.height}m</p>
+                  <p>Weight: ${pokemon.weight}kg</p>
+                  <p>Type(s): ${typeList}</p>
+                  <p>Abilities: ${pokemon.abilities.map((a) => a.ability.name).join(", ")}</p>
+                  <p>Base Stats:</p>
+                </div>
+
+                <div class="basestats">
                 ${statList}
-                <button onclick="goHome()">Go Home</button>
-              </div>
+                </div>
+                <img src="${pokemon.sprites.front_default}" /> 
+
+                <p><button onclick="goHome()">Back</button></p>
+              
             `;
             pokemonList.innerHTML = pokemonListHTML;
           };
