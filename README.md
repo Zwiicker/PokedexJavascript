@@ -1,4 +1,4 @@
-<div align="center"><img align="" width="200px" src="/angular-developer.png">
+<div align="center"><img align="" width="150px" src="/angular-developer.png">
   
  # Pokédex
 
